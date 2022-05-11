@@ -1,23 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import TextInput from "./TextInput";
+import { useState, useEffect } from "react";
+import ConvertedText from "./ConvertedText";
 
 function App() {
+  const [originalText, setOriginalText] = useState();
+  const [convertedText, setConvertedText] = useState();
+
+  function handleOriginal(event) {
+    event.preventDefault(originalText);
+    setConvertedText(originalText);
+  }
+
+  function handleText(e) {
+    const inputText = e.target.value;
+    setOriginalText(inputText);
+  }
+
+  useEffect(() => {
+    
+  }, [originalText]);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Convert you text to hiragana</h1>
+      <div className="Container">
+        <TextInput
+          submitOriginal={handleOriginal}
+          setText={handleText}
+          // userInput={originalText}
+        />
+        <ConvertedText text={convertedText} />
+      </div>
     </div>
   );
 }
