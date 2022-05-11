@@ -9,7 +9,7 @@ function App() {
 
   function handleOriginal(event) {
     event.preventDefault(originalText);
-    setConvertedText(originalText);
+    setConvertedText(conveting(originalText));
   }
 
   function handleText(e) {
@@ -17,9 +17,21 @@ function App() {
     setOriginalText(inputText);
   }
 
-  useEffect(() => {
-    
-  }, [originalText]);
+  function conveting(text) {
+    let input = text;
+    let conv = [];
+    for (let i = 0; i < input.length; i++) {
+      if (input[i] === "a") {
+        console.log("あ");
+        conv.push("あ");
+      } else {
+        conv.push(input[i]);
+      }
+    }
+    let convT = conv.join("");
+    return convT;
+  }
+  useEffect(() => {}, [originalText]);
 
   return (
     <div className="App">
