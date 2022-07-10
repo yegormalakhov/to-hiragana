@@ -2,7 +2,7 @@ function TextInput({ submitOriginal, setText, userInput }) {
   return (
     <div className="formContainer">
       <form onSubmit={submitOriginal}>
-        <p>Russian/original</p>
+        <p>Original text</p>
         <textarea
           id="nativeText"
           type="text"
@@ -14,7 +14,11 @@ function TextInput({ submitOriginal, setText, userInput }) {
           placeholder="Here shoul be your texts"
         ></textarea>
         <br />
-        <input type="submit" value="Submit" className="submit-btn" />
+        <input
+          type="submit"
+          value="Submit and convert"
+          className="submit-btn"
+        />
       </form>
     </div>
   );
