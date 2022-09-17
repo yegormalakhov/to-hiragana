@@ -1,8 +1,8 @@
 import "./App.css";
 import TextInput from "./TextInput";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import ConvertedText from "./ConvertedText";
-import ConvertingFunction from "./ConvertingFinction";
+import ConvertingFunction from "./ConvertingFunction";
 
 function App() {
   const [originalText, setOriginalText] = useState();
@@ -17,19 +17,26 @@ function App() {
     const resultedText = ConvertingFunction(originalText);
     setConvertedText(resultedText);
   }
-  
+
   return (
-    <div className="App">
-      <h1>Convert you text to hiragana</h1>
-      <div className="Container">
+    <div className="App flow">
+      <header className="container">
+        <h1 className=" ff-serif fs-700 text-accent uppercase mt-1">
+          Convert you text to hiragana
+        </h1>
+      </header>
+
+      <main className="container grid mt-1">
         <TextInput
           submitOriginal={handleOriginal}
           setText={handleText}
           // userInput={originalText}
         />
+
         <ConvertedText text={convertedText} />
+
         {/* <ConvertingFunction input={originalText} output={converted} /> */}
-      </div>
+      </main>
     </div>
   );
 }
