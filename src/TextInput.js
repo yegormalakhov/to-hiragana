@@ -10,7 +10,7 @@ function TextInput({ submitOriginal, setText, userInput }) {
         onChange={setText}
         name="originalText"
         rows="30"
-        col="50"
+        col="45"
         placeholder="Here shoul be your texts"
       ></textarea>
       <input
