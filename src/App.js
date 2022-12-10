@@ -16,7 +16,7 @@ function App() {
   }
   function handleOriginal(event) {
     event.preventDefault();
-    const resultedText = ConvertingFunction1(originalText);
+    const resultedText = ConvertingFunction(originalText);
     setConvertedText(resultedText);
   }
 
