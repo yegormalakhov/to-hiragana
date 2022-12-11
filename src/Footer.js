@@ -1,5 +1,14 @@
 function Footer() {
-  return <footer>Footer</footer>;
+  return (
+  <footer>
+    <ul>
+      <li>About</li>
+      <li>FAQ</li>
+      <li>Contact</li>
+      <li>Other</li>
+    </ul>
+  </footer>
+  );
 }
 
 export default Footer;

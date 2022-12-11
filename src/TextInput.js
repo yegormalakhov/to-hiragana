@@ -1,7 +1,7 @@
 function TextInput({ submitOriginal, setText, userInput }) {
   return (
-    <form className="input flow flex" onSubmit={submitOriginal}>
-      <h2 className="ff-sans-normal fs-500">Original text</h2>
+    <form className="input flex" onSubmit={submitOriginal}>
+      <h2 className="ff-sans-normal">Original text</h2>
       <textarea
         className="text-area"
         id="nativeText"
@@ -11,7 +11,7 @@ function TextInput({ submitOriginal, setText, userInput }) {
         name="originalText"
         rows="30"
         col="45"
-        placeholder="Here shoul be your texts"
+        placeholder="Here should be your texts"
       ></textarea>
       <input
         type="submit"

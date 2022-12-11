@@ -21,14 +21,14 @@ function App() {
   }
 
   return (
-    <div className="App flow">
+    <div className="App">
       <header className="container">
-        <h1 className=" ff-serif fs-700 text-white uppercase mt-1">
+        <h1 className=" ff-serif text-white uppercase">
           Convert you text to hiragana
         </h1>
       </header>
 
-      <main className="container grid mt-1">
+      <main className="container">
         <TextInput
           submitOriginal={handleOriginal}
           setText={handleText}
@@ -38,8 +38,9 @@ function App() {
         <ConvertedText text={convertedText} />
 
         {/* <ConvertingFunction input={originalText} output={converted} /> */}
-        <Footer />
+        
       </main>
+      <Footer />
     </div>
   );
 }
